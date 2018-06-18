@@ -9,12 +9,12 @@ function Insomnia(){
 Insomnia.prototype = {
 
 		keepAwake: function (successCallback, errorCallback) {
-		  exec(successCallback, errorCallback, "Insomnia", "keepAwake", []);
+		  cordova.exec(successCallback, errorCallback, "Insomnia", "keepAwake", []);
 		  this._sleepingAlowed = false;
 		},
 
 		allowSleepAgain: function (successCallback, errorCallback) {
-		  exec(successCallback, errorCallback, "Insomnia", "allowSleepAgain", []);
+		  cordova.exec(successCallback, errorCallback, "Insomnia", "allowSleepAgain", []);
 		  this._sleepingAlowed = true;
 		},
 
